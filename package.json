@@ -1,0 +1,34 @@
+{
+  "name": "nexovanta-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QLLEX Technologies — Premium IT Services & Software Engineering Platform",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm --workspace=@nexovanta/api run dev",
+    "dev:web": "npm --workspace=@nexovanta/web run dev",
+    "build:shared": "npm --workspace=@nexovanta/shared run build",
+    "build:api": "npm --workspace=@nexovanta/shared run build && npm --workspace=@nexovanta/api run build",
+    "build:web": "npm --workspace=@nexovanta/shared run build && npm --workspace=@nexovanta/web run build",
+    "build": "npm run build:shared && npm --workspace=@nexovanta/api run build && npm --workspace=@nexovanta/web run build",
+    "start:api": "npm --workspace=@nexovanta/api run start",
+    "start:web": "npm --workspace=@nexovanta/web run start",
+    "lint": "npm --workspace=@nexovanta/web run lint",
+    "typecheck": "npm --workspace=@nexovanta/shared run typecheck && npm --workspace=@nexovanta/api run typecheck && npm --workspace=@nexovanta/web run typecheck",
+    "test:verify": "node scripts/verify-platform.mjs",
+    "test:browser": "node scripts/verify-browser.mjs",
+    "test": "npm run test:verify && npm run test:browser"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.64.0"
+  },
+  "dependencies": {
+    "mongodb": "^7.8.0"
+  }
+}
