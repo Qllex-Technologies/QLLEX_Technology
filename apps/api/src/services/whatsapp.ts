@@ -134,7 +134,6 @@ class WhatsAppNotificationService {
       `✉️ *Email:* ${enquiry.email}`,
       `📞 *Phone:* ${enquiry.phone || "Not provided"}`,
       `💼 *Service:* ${enquiry.serviceRequired}`,
-      `💰 *Budget:* ${enquiry.budget || "Not specified"}`,
       enquiry.companyName ? `🏢 *Company:* ${enquiry.companyName}` : "",
       ``,
       `📝 *Project Summary:*`,
@@ -164,7 +163,6 @@ class WhatsAppNotificationService {
       `📞 *Phone:* ${quote.phone}`,
       `🏢 *Company:* ${quote.companyName || "Not provided"}`,
       `🏷️ *Category:* ${quote.projectCategory}`,
-      `💰 *Budget Range:* ${quote.budgetRange}`,
       `⏱️ *Timeline:* ${quote.desiredTimeline}`,
       quote.requiredFeatures.length > 0
         ? `✨ *Features:* ${quote.requiredFeatures.join(", ")}`

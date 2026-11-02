@@ -205,10 +205,10 @@ export default async function HomePage() {
                 Our Services
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#333333]">
-                Four Core Engineering Capabilities
+                Core IT &amp; Digital Services
               </h2>
               <p className="text-sm sm:text-base text-[#666666]">
-                Clear, focused digital services tailored to deliver measurable value without unnecessary complexity.
+                Comprehensive, high-performance technology services tailored to deliver measurable value and scale your digital presence.
               </p>
             </div>
             <Link

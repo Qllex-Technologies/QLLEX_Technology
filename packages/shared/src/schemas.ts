@@ -41,12 +41,6 @@ export const ContactEnquirySchema = z.object({
     .trim()
     .min(2, "Please select the service required.")
     .max(120),
-  budget: z
-    .string()
-    .trim()
-    .max(80)
-    .optional()
-    .or(z.literal("")),
   projectDescription: z
     .string()
     .trim()
@@ -76,7 +70,6 @@ export const QuoteRequestSchema = z.object({
   phone: z.string().trim().max(30).optional().or(z.literal("")),
   companyName: z.string().trim().max(120).optional().or(z.literal("")),
   projectCategory: z.string().trim().min(2).max(100),
-  budgetRange: z.string().trim().min(1).max(100),
   desiredTimeline: z.string().trim().min(1).max(100),
   requiredFeatures: z.array(z.string()).default([]),
   projectDetails: z.string().trim().min(10).max(5000),

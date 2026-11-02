@@ -80,7 +80,7 @@ export interface IQuoteRequest extends Document {
   phone: string;
   companyName?: string;
   projectCategory: string;
-  budgetRange: string;
+  budgetRange?: string;
   desiredTimeline: string;
   requiredFeatures: string[];
   projectDetails: string;
@@ -97,7 +97,7 @@ const QuoteRequestMongooseSchema = new Schema<IQuoteRequest>(
     phone: { type: String, required: true, trim: true, maxlength: 30 },
     companyName: { type: String, trim: true, maxlength: 120, default: "" },
     projectCategory: { type: String, required: true, trim: true, maxlength: 100 },
-    budgetRange: { type: String, required: true, trim: true, maxlength: 100 },
+    budgetRange: { type: String, trim: true, maxlength: 100, default: "" },
     desiredTimeline: { type: String, required: true, trim: true, maxlength: 100 },
     requiredFeatures: { type: [String], required: true },
     projectDetails: { type: String, required: true, trim: true, maxlength: 5000 },

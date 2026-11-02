@@ -45,8 +45,7 @@ export function ContactForm({
       fullName: "",
       email: "",
       phone: "",
-      serviceRequired: defaultService || BRAND_CONFIG.servicesList[0]?.title || "Web Development & Next.js",
-      budget: "",
+      serviceRequired: defaultService || BRAND_CONFIG.servicesList[0]?.title || "Web Design & Development",
       projectDescription: "",
       websiteUrl: "",
     },
@@ -263,14 +262,11 @@ export function ContactForm({
                 {s.title}
               </option>
             ))}
-            <option value="Custom Software Architecture">
-              Custom Software Architecture
+            <option value="Custom Software Solution">
+              Custom Software Solution
             </option>
-            <option value="Dedicated Engineering Pod">
-              Dedicated Engineering Pod
-            </option>
-            <option value="Technical Maintenance & Support">
-              Technical Maintenance &amp; Support
+            <option value="Technical Consultation">
+              Technical Consultation
             </option>
           </select>
           {errors.serviceRequired && (
@@ -279,29 +275,6 @@ export function ContactForm({
             </p>
           )}
         </div>
-      </div>
-
-      {/* Estimated Budget (Optional) */}
-      <div>
-        <label
-          htmlFor="contact-budget"
-          className="block text-xs font-mono uppercase tracking-wider text-[#666666] mb-2 font-semibold"
-        >
-          Estimated Budget <span className="text-gray-400 text-[11px]">(Optional)</span>
-        </label>
-        <select
-          id="contact-budget"
-          className="w-full rounded-xl border border-[#E8E8E5] bg-[#F5F5F3] px-4 py-3 text-sm text-[#333333] focus:border-[#333333] focus:bg-white focus:outline-none transition-all cursor-pointer"
-          {...register("budget")}
-        >
-          <option value="">Select an estimated budget range (optional)</option>
-          <option value="< $10,000">&lt; $10,000</option>
-          <option value="$10,000 – $25,000">$10,000 – $25,000</option>
-          <option value="$25,000 – $50,000">$25,000 – $50,000</option>
-          <option value="$50,000 – $100,000">$50,000 – $100,000</option>
-          <option value="$100,000+">$100,000+</option>
-          <option value="Flexible / Retainer">Flexible / Ongoing Monthly Retainer</option>
-        </select>
       </div>
 
       {/* Short Project Description */}

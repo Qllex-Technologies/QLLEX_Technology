@@ -790,6 +790,379 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
       },
     ],
   },
+
+  "web-design-development": {
+    slug: "web-design-development",
+    title: "Web Design & Development",
+    shortTitle: "Web Design & Dev",
+    category: "Web & Digital Platforms",
+    seoTitle: "Web Design & Development Services | QLLEX Technologies",
+    seoDescription:
+      "Professional web design and development services. We build responsive business websites, modern UI implementations, and provide ongoing website maintenance.",
+    heroHeadline:
+      "Modern Web Design & Development for Growing Businesses",
+    heroSubheadline:
+      "We build responsive, accessible, and high-converting business websites engineered with modern UI frameworks and continuous maintenance support.",
+    problemStatement:
+      "Generic website templates suffer from slow loading speeds, rigid styling, broken mobile layouts, and difficult ongoing maintenance.",
+    architecturalApproach:
+      "We craft responsive websites with component-driven architecture using Next.js, React, and Tailwind CSS, ensuring pixel-perfect UI execution and seamless cross-device compatibility.",
+    idealFor: [
+      "Businesses seeking a modern, authoritative corporate web presence",
+      "Startups requiring fast, scalable product landing experiences",
+      "Companies needing reliable, ongoing website maintenance and security updates",
+    ],
+    capabilities: [
+      {
+        title: "Responsive Business Websites",
+        description:
+          "Mobile-first responsive layouts that display flawlessly across smartphones, tablets, laptops, and ultra-wide screens.",
+      },
+      {
+        title: "Modern UI Implementation",
+        description:
+          "Clean visual hierarchy, bespoke design tokens, smooth transitions, and high-performance frontend code.",
+      },
+      {
+        title: "Website Maintenance & Support",
+        description:
+          "Proactive performance audits, security patching, dependency updates, and continuous content support.",
+      },
+    ],
+    deliverables: [
+      "Responsive business website codebase with Next.js & Tailwind CSS",
+      "Modern UI component library and typography system",
+      "Ongoing website maintenance plan and technical support",
+      "Search-engine-optimized semantic markup and metadata",
+    ],
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    faqs: [
+      {
+        question: "Will our website look great on all mobile devices?",
+        answer:
+          "Yes. Every website is engineered mobile-first and tested rigorously across diverse viewport sizes to guarantee flawless rendering.",
+      },
+    ],
+  },
+
+  "ecommerce-development": {
+    slug: "ecommerce-development",
+    title: "E-commerce Development",
+    shortTitle: "E-commerce Dev",
+    category: "Digital Commerce",
+    seoTitle: "Custom E-commerce Development Services | QLLEX Technologies",
+    seoDescription:
+      "Custom e-commerce website development, product catalogues, shopping carts, and seamless payment and order integrations.",
+    heroHeadline:
+      "High-Performance Custom E-Commerce Solutions",
+    heroSubheadline:
+      "Tailor-made online stores, structured product catalogues, and reliable payment and order processing designed for high conversion.",
+    problemStatement:
+      "Standard storefronts become bloated with excessive third-party plugins, causing sluggish checkouts and cart abandonment.",
+    architecturalApproach:
+      "We engineer custom e-commerce experiences with optimized catalog schemas, fast cart state management, and direct API integrations with leading payment gateways.",
+    idealFor: [
+      "DTC brands launching dedicated, fast online stores",
+      "Wholesalers and B2B businesses requiring custom product catalogues and orders",
+      "Merchants needing custom checkout and workflow integrations",
+    ],
+    capabilities: [
+      {
+        title: "Custom E-commerce Websites",
+        description:
+          "Fully bespoke storefronts designed around your brand identity without the limitations of standard templates.",
+      },
+      {
+        title: "Product Catalogue & Shopping Cart",
+        description:
+          "Fast, faceted product filtering, inventory-aware catalogues, and friction-free shopping cart experiences.",
+      },
+      {
+        title: "Payment and Order Integrations",
+        description:
+          "Secure payment gateway integrations, order management pipelines, and automated customer order notifications.",
+      },
+    ],
+    deliverables: [
+      "Custom e-commerce frontend with fast catalog browsing",
+      "Integrated shopping cart and checkout pipeline",
+      "Payment gateway and webhook processing configuration",
+      "Order tracking and administrative management views",
+    ],
+    techStack: ["Next.js", "Node.js", "Express.js", "MongoDB", "Payment APIs"],
+    faqs: [
+      {
+        question: "Can we integrate custom payment gateways?",
+        answer:
+          "Yes. We support direct integration with major regional and global payment providers with verified webhooks.",
+      },
+    ],
+  },
+
+  "ui-ux-design": {
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+    shortTitle: "UI/UX Design",
+    category: "Design & Creative",
+    seoTitle: "UI/UX Design Services | Wireframing, Prototyping & Testing | QLLEX Technologies",
+    seoDescription:
+      "User research, wireframing, prototyping, interface design, and usability testing to craft intuitive digital experiences.",
+    heroHeadline:
+      "Intuitive UI/UX Design Grounded in User Research",
+    heroSubheadline:
+      "We create beautiful, functional, and user-centric interfaces from initial wireframes to interactive prototypes and usability testing.",
+    problemStatement:
+      "Confusing user journeys and cluttered interfaces frustrate users and lead to low conversion rates and customer churn.",
+    architecturalApproach:
+      "We apply human-centered design principles, validating user workflows through iterative wireframing, high-fidelity Figma prototypes, and empirical usability tests.",
+    idealFor: [
+      "SaaS founders designing new product interfaces from scratch",
+      "Companies revamping existing web and mobile apps for better usability",
+      "Teams needing a cohesive, reusable design system",
+    ],
+    capabilities: [
+      {
+        title: "User Research & Wireframing",
+        description:
+          "In-depth user flow mapping, persona research, and low-fidelity wireframing to establish intuitive navigation.",
+      },
+      {
+        title: "Prototyping & Interface Design",
+        description:
+          "High-fidelity visual design, responsive design systems, and interactive clickable prototypes in Figma.",
+      },
+      {
+        title: "Usability Testing",
+        description:
+          "Structured usability evaluations and feedback synthesis to identify friction points and optimize task completion.",
+      },
+    ],
+    deliverables: [
+      "Complete Figma design files and component system",
+      "Interactive clickable prototypes for user testing and stakeholder review",
+      "Usability audit report with actionable optimization recommendations",
+      "Developer handoff documentation with design tokens and assets",
+    ],
+    techStack: ["Figma", "Design Systems", "Prototyping", "Usability Testing"],
+    faqs: [
+      {
+        question: "Do you provide design files ready for developer handoff?",
+        answer:
+          "Yes. All designs include organized components, color and typography tokens, layout grids, and interactive states.",
+      },
+    ],
+  },
+
+  "digital-marketing": {
+    slug: "digital-marketing",
+    title: "Digital Marketing",
+    shortTitle: "Digital Marketing",
+    category: "Growth & Marketing",
+    seoTitle: "Digital Marketing Services | SEO, Social Media & Content | QLLEX Technologies",
+    seoDescription:
+      "Comprehensive digital marketing services: Search Engine Optimisation (SEO), social media management, and content marketing.",
+    heroHeadline:
+      "Data-Driven Digital Marketing to Scale Your Reach",
+    heroSubheadline:
+      "We combine technical SEO, targeted social media management, and high-impact content marketing to build brand visibility and drive qualified leads.",
+    problemStatement:
+      "Great digital products often fail to gain traction without consistent search visibility, social brand presence, and compelling content.",
+    architecturalApproach:
+      "We implement technical on-page and architectural SEO, create strategic social media content calendars, and publish informative articles that rank and convert.",
+    idealFor: [
+      "Growing companies wanting higher search rankings and organic inbound traffic",
+      "Brands looking to build an engaged social media community",
+      "B2B businesses requiring thought leadership and authoritative content",
+    ],
+    capabilities: [
+      {
+        title: "Search Engine Optimisation (SEO)",
+        description:
+          "Technical site audits, keyword strategy, schema markup implementation, and on-page optimization for Google rankings.",
+      },
+      {
+        title: "Social Media Management",
+        description:
+          "Channel strategy, consistent branded post creation, community engagement, and performance analytics.",
+      },
+      {
+        title: "Content Marketing",
+        description:
+          "Educational blog posts, case study articles, and conversion-focused copywriting that establish market authority.",
+      },
+    ],
+    deliverables: [
+      "Technical SEO audit and optimization implementation",
+      "Monthly social media content schedule and creative assets",
+      "High-value blog articles and case studies tailored for organic search",
+      "Monthly performance and analytics reporting",
+    ],
+    techStack: ["Technical SEO", "Schema Markup", "Analytics", "Content Strategy"],
+    faqs: [
+      {
+        question: "How quickly can we expect to see SEO results?",
+        answer:
+          "Technical fixes deliver immediate crawl improvements, while keyword rankings and organic traffic growth typically show measurable gains within 3 to 6 months.",
+      },
+    ],
+  },
+
+  "ai-agent-development": {
+    slug: "ai-agent-development",
+    title: "AI Agent Development",
+    shortTitle: "AI Agents",
+    category: "Applied AI",
+    seoTitle: "AI Agent Development Services | Autonomous Agents & RAG | QLLEX Technologies",
+    seoDescription:
+      "Custom AI agent development, intelligent chatbots, Retrieval-Augmented Generation (RAG) pipelines, and LLM workflow integrations.",
+    heroHeadline:
+      "Custom AI Agents & Intelligent Automation Workflows",
+    heroSubheadline:
+      "We design and deploy purpose-built AI agents, enterprise RAG pipelines, and tool-augmented LLM workflows that automate complex business tasks.",
+    problemStatement:
+      "Generic chatbots lack domain context, hallucinate answers, and cannot securely interact with internal enterprise databases and APIs.",
+    architecturalApproach:
+      "We construct autonomous AI agents with bounded tool-calling capabilities, deterministic vector retrieval (RAG), strict privacy boundaries, and verified structured outputs.",
+    idealFor: [
+      "Enterprises wanting internal knowledge copilots grounded in proprietary SOPs",
+      "Customer support teams automating Tier-1 inquiry resolution",
+      "Operations teams requiring automated data extraction and task execution",
+    ],
+    capabilities: [
+      {
+        title: "Custom AI Agents & Chatbots",
+        description:
+          "Domain-specific conversational agents with conversational memory, persona alignment, and multi-turn reasoning.",
+      },
+      {
+        title: "Retrieval-Augmented Generation (RAG) Pipelines",
+        description:
+          "Document ingestion, semantic chunking, vector indexing, and citation-backed answer generation.",
+      },
+      {
+        title: "Workflow & Tool Integrations",
+        description:
+          "Safe agentic function calling connecting AI models to internal databases, REST APIs, and third-party SaaS services.",
+      },
+    ],
+    deliverables: [
+      "Custom AI agent backend with Python / FastAPI or Node.js",
+      "Vector search pipeline and document indexing infrastructure",
+      "API integrations for automated multi-step tool execution",
+      "Testing suite for accuracy verification and prompt guardrails",
+    ],
+    techStack: ["Python", "FastAPI", "Vector Search", "LLMs", "RAG", "Node.js"],
+    faqs: [
+      {
+        question: "Can AI agents safely execute tasks in our existing software?",
+        answer:
+          "Yes. We implement strict parameter validation, role-based permissions, and optional human-in-the-loop approvals for sensitive operations.",
+      },
+    ],
+  },
+
+  "web-application-development": {
+    slug: "web-application-development",
+    title: "Web Application Development",
+    shortTitle: "Web Applications",
+    category: "Custom Software Engineering",
+    seoTitle: "Custom Web Application Development Services | SaaS & Cloud | QLLEX Technologies",
+    seoDescription:
+      "Scalable SaaS platform development, business portals, operational dashboards, and full-stack web applications built on modern architecture.",
+    heroHeadline:
+      "Custom Web Applications Engineered for Scale and Reliability",
+    heroSubheadline:
+      "From multi-tenant SaaS platforms to mission-critical internal business portals, we engineer custom web applications that support complex workflows.",
+    problemStatement:
+      "Outdated software and fragmented spreadsheets slow operations, create data security risks, and restrict business growth.",
+    architecturalApproach:
+      "We architect full-stack applications with clean separation of concerns, robust REST APIs, role-based access control (RBAC), and optimized database schemas.",
+    idealFor: [
+      "Founders launching new multi-tenant SaaS platforms",
+      "Businesses replacing legacy tools with centralized web applications",
+      "Enterprises requiring real-time analytics and operational dashboards",
+    ],
+    capabilities: [
+      {
+        title: "SaaS Platform Development",
+        description:
+          "Multi-tenant architectures, subscription lifecycle handling, user onboarding, and granular tenant isolation.",
+      },
+      {
+        title: "Business Portals & Dashboards",
+        description:
+          "High-density operational dashboards, interactive data visualization, role-based permissions, and audit logs.",
+      },
+      {
+        title: "Full-Stack Web Applications",
+        description:
+          "Unified TypeScript full-stack systems with type-safe APIs, database indexing, and automated deployment pipelines.",
+      },
+    ],
+    deliverables: [
+      "Production-ready Next.js / React frontend application",
+      "Scalable backend REST API (Express / Node.js or Python)",
+      "Database schema definitions with performance indexes",
+      "Role-based authentication, user management, and security suite",
+    ],
+    techStack: ["Next.js", "React", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+    faqs: [
+      {
+        question: "Can our web application scale as user numbers grow?",
+        answer:
+          "Yes. We build with modular, stateless API designs and optimized database query patterns designed for high concurrency.",
+      },
+    ],
+  },
+
+  "mobile-application-development": {
+    slug: "mobile-application-development",
+    title: "Mobile Application Development",
+    shortTitle: "Mobile Apps",
+    category: "Mobile Engineering",
+    seoTitle: "Mobile Application Development Services | Flutter, iOS & Android | QLLEX Technologies",
+    seoDescription:
+      "Cross-platform iOS and Android mobile app development using Flutter. High-performance, offline-capable mobile apps with scalable backends.",
+    heroHeadline:
+      "Cross-Platform Mobile Apps Engineered for Performance",
+    heroSubheadline:
+      "We design and build engaging iOS and Android applications using Flutter and native SDK integrations, ensuring 60fps smoothness from a single codebase.",
+    problemStatement:
+      "Maintaining separate native applications doubles engineering overhead, while low-quality hybrid wrappers lead to poor performance.",
+    architecturalApproach:
+      "We utilize Flutter to compile directly to native machine code, paired with offline-first local storage, biometric security, and clean REST API synchronization.",
+    idealFor: [
+      "Startups wanting to launch on both the Apple App Store and Google Play simultaneously",
+      "Companies extending their web platforms to mobile users",
+      "Field teams needing resilient offline mobile capabilities",
+    ],
+    capabilities: [
+      {
+        title: "iOS & Android Development",
+        description:
+          "Platform-adaptive UI components, hardware feature integrations, and store-ready signing and distribution.",
+      },
+      {
+        title: "Cross-Platform Development (Flutter)",
+        description:
+          "A single, high-efficiency Dart codebase delivering unified business logic and consistent high-frame-rate rendering.",
+      },
+    ],
+    deliverables: [
+      "Cross-platform Flutter mobile source code for iOS and Android",
+      "Backend REST API endpoints and database synchronization",
+      "Authentication, push notifications, and local offline caching modules",
+      "Store submission readiness and release documentation",
+    ],
+    techStack: ["Flutter", "Dart", "iOS", "Android", "REST APIs", "Node.js"],
+    faqs: [
+      {
+        question: "Will the app feel native on both iOS and Android?",
+        answer:
+          "Yes. Flutter renders directly to native canvas and adapts platform conventions like navigation transitions and modal sheets.",
+      },
+    ],
+  },
 };
 
 export const SERVICES_ARRAY: ServiceDetail[] = Object.values(SERVICES_DATA);

@@ -286,10 +286,12 @@ async function runBrowserVerification() {
     await menuButton.click();
     await page.waitForSelector("#mobile-navigation-drawer", { state: "visible" });
 
-    // Verify Mobile Drawer renders QLLEX Logo
+    // Verify Mobile Drawer does not contain redundant duplicate logo, while header logo remains visible
+    const headerLogo = await page.locator("header img[alt='QLLEX Technologies Logo']").count();
+    assert.ok(headerLogo >= 1, "Main header must render the QLLEX Technologies logo image with exact alt text");
     const drawerLogoAlt = await page.locator("#mobile-navigation-drawer img[alt='QLLEX Technologies Logo']").count();
-    assert.ok(drawerLogoAlt >= 1, "Mobile drawer must render the new QLLEX Technologies logo image with exact alt text");
-    console.log("  -> PASS: New QLLEX Technologies logo verified in mobile drawer");
+    assert.strictEqual(drawerLogoAlt, 0, "Mobile drawer must NOT render redundant duplicate QLLEX Technologies logo");
+    console.log("  -> PASS: Duplicate logo removed from mobile drawer; main header logo intact");
 
     await page.screenshot({
       path: path.join(ARTIFACT_DIR, "mobile-drawer-open.png"),
@@ -349,8 +351,7 @@ async function runBrowserVerification() {
     await page.fill("#contact-fullName", testClientName);
     await page.fill("#contact-email", testClientEmail);
     await page.fill("#contact-phone", "+91 9313188307");
-    await page.selectOption("#contact-serviceRequired", "Web Development & Next.js Platforms");
-    await page.selectOption("#contact-budget", "$25,000 – $50,000");
+    await page.selectOption("#contact-serviceRequired", "Web Design & Development");
     await page.fill(
       "#contact-projectDescription",
       "We require an enterprise Next.js SaaS portal with real-time analytics, type-safe API, and high-performance MongoDB data persistence."

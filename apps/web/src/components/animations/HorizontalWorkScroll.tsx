@@ -237,7 +237,7 @@ export function HorizontalWorkScroll({ projects }: HorizontalWorkScrollProps) {
     <section
       id="selected-work"
       ref={sectionRef}
-      className="relative bg-[#F5F5F3] border-y border-[#E8E8E5] pt-16 sm:pt-20 lg:pt-20 pb-2.5 sm:pb-3 lg:pb-4 overflow-hidden select-none"
+      className="relative bg-[#F5F5F3] border-y border-[#E8E8E5] pt-8 sm:pt-12 lg:pt-16 pb-2.5 sm:pb-3 lg:pb-4 overflow-hidden select-none"
     >
       {/* Section Header: Compact, Elegant, Zero Wasted Height */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-2 sm:mb-2.5 lg:mb-3">

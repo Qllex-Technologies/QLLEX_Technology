@@ -47,8 +47,7 @@ export function QuoteRequestForm() {
       email: "",
       phone: "",
       companyName: "",
-      projectCategory: "Web Application / SaaS Platform",
-      budgetRange: "$10,000 – $25,000",
+      projectCategory: "Web Design & Development",
       desiredTimeline: "1 – 3 Months",
       requiredFeatures: ["Custom UI/UX Design System", "REST API & Database Architecture"],
       projectDetails: "",
@@ -264,9 +263,9 @@ export function QuoteRequestForm() {
       {/* Section 2: Project Parameters */}
       <div className="border-t border-white/10 pt-6">
         <h3 className="font-mono text-xs uppercase tracking-wider text-accent mb-4">
-          02 // Project Category, Budget &amp; Timeline
+          02 // Project Category &amp; Timeline
         </h3>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div>
             <label
               htmlFor="quote-projectCategory"
@@ -279,61 +278,34 @@ export function QuoteRequestForm() {
               className="w-full rounded-lg border border-white/15 bg-obsidian-900 px-3.5 py-3 text-sm text-slateText-primary focus:border-accent focus:outline-none"
               {...register("projectCategory")}
             >
-              <option value="Web Application / SaaS Platform">
-                Web Application / SaaS Platform
+              <option value="Web Design & Development">
+                Web Design &amp; Development
               </option>
-              <option value="Custom Corporate / Marketing Website">
-                Custom Corporate / Marketing Website
+              <option value="E-commerce Development">
+                E-commerce Development
               </option>
-              <option value="MERN Stack / Next.js Full-Stack System">
-                MERN Stack / Next.js Full-Stack System
+              <option value="UI/UX Design">
+                UI/UX Design
               </option>
-              <option value="AI / Machine Learning / RAG Solution">
-                AI / Machine Learning / RAG Solution
+              <option value="Digital Marketing">
+                Digital Marketing
               </option>
-              <option value="Python Backend / Data Pipeline">
-                Python Backend / Data Pipeline
+              <option value="AI Agent Development">
+                AI Agent Development
               </option>
-              <option value="Mobile Application (Flutter iOS & Android)">
-                Mobile Application (Flutter iOS &amp; Android)
+              <option value="Web Application Development">
+                Web Application Development
               </option>
-              <option value="Headless E-Commerce / B2B Portal">
-                Headless E-Commerce / B2B Portal
+              <option value="Mobile Application Development">
+                Mobile Application Development
               </option>
-              <option value="UI/UX Design, GSAP & 3D Web Experience">
-                UI/UX Design, GSAP &amp; 3D Web Experience
+              <option value="Custom Enterprise Solution">
+                Custom Enterprise Solution
               </option>
             </select>
             {errors.projectCategory && (
               <p className="mt-1.5 text-xs text-red-400" role="alert">
                 {errors.projectCategory.message}
-              </p>
-            )}
-          </div>
-
-          <div>
-            <label
-              htmlFor="quote-budgetRange"
-              className="block text-xs font-mono uppercase tracking-wider text-slateText-secondary mb-2"
-            >
-              Estimated Budget Range <span className="text-accent">*</span>
-            </label>
-            <select
-              id="quote-budgetRange"
-              className="w-full rounded-lg border border-white/15 bg-obsidian-900 px-3.5 py-3 text-sm text-slateText-primary focus:border-accent focus:outline-none"
-              {...register("budgetRange")}
-            >
-              <option value="$5,000 – $10,000">$5,000 – $10,000</option>
-              <option value="$10,000 – $25,000">$10,000 – $25,000</option>
-              <option value="$25,000 – $50,000">$25,000 – $50,000</option>
-              <option value="$50,000 – $100,000+">$50,000 – $100,000+</option>
-              <option value="Need Architecture Discovery Estimate">
-                Need Architecture Discovery Estimate
-              </option>
-            </select>
-            {errors.budgetRange && (
-              <p className="mt-1.5 text-xs text-red-400" role="alert">
-                {errors.budgetRange.message}
               </p>
             )}
           </div>

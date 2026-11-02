@@ -74,7 +74,6 @@ class EmailNotificationService {
       `Email: ${enquiry.email}`,
       `Phone: ${enquiry.phone || "Not specified"}`,
       `Service Required: ${enquiry.serviceRequired}`,
-      `Estimated Budget: ${enquiry.budget || "Not specified"}`,
       `Company: ${enquiry.companyName || "Not specified"}`,
       `Preferred Contact Method: ${enquiry.preferredContactMethod || "Email"}`,
       ``,
@@ -109,10 +108,6 @@ class EmailNotificationService {
             <td style="padding: 8px 0; color: #525866;">Service Required:</td>
             <td style="padding: 8px 0; font-weight: 600; color: #2563EB;">${enquiry.serviceRequired}</td>
           </tr>
-          <tr>
-            <td style="padding: 8px 0; color: #525866;">Estimated Budget:</td>
-            <td style="padding: 8px 0; color: #0A0A0C;">${enquiry.budget || "Not specified"}</td>
-          </tr>
           ${enquiry.companyName ? `<tr><td style="padding: 8px 0; color: #525866;">Company:</td><td style="padding: 8px 0; color: #0A0A0C;">${enquiry.companyName}</td></tr>` : ""}
         </table>
 
@@ -137,7 +132,7 @@ class EmailNotificationService {
   }
 
   async notifyNewQuoteRequest(quote: QuoteRequestInput & { id: string }) {
-    const subject = `[${BRAND_CONFIG.shortName} Quote Request] ${quote.projectCategory} (${quote.budgetRange}) — ${quote.name}`;
+    const subject = `[${BRAND_CONFIG.shortName} Quote Request] ${quote.projectCategory} — ${quote.name}`;
     const text = [
       `New Project Quote Request Received (${BRAND_CONFIG.name})`,
       `Reference ID: ${quote.id}`,
@@ -146,7 +141,6 @@ class EmailNotificationService {
       `Phone: ${quote.phone}`,
       `Company: ${quote.companyName || "Not specified"}`,
       `Category: ${quote.projectCategory}`,
-      `Budget Range: ${quote.budgetRange}`,
       `Desired Timeline: ${quote.desiredTimeline}`,
       `Required Features: ${quote.requiredFeatures.join(", ")}`,
       ``,
@@ -163,7 +157,6 @@ class EmailNotificationService {
         <p><strong>Phone:</strong> ${quote.phone}</p>
         <p><strong>Company:</strong> ${quote.companyName || "Not specified"}</p>
         <p><strong>Category:</strong> ${quote.projectCategory}</p>
-        <p><strong>Budget Range:</strong> ${quote.budgetRange}</p>
         <p><strong>Desired Timeline:</strong> ${quote.desiredTimeline}</p>
         <p><strong>Required Features:</strong> ${quote.requiredFeatures.join(", ")}</p>
         <hr style="border: 0; border-top: 1px solid #E5E7EB; margin: 16px 0;" />

@@ -120,9 +120,6 @@ export function Header() {
           aria-label="Mobile Navigation"
           className="fixed inset-x-0 top-16 sm:top-20 bottom-0 z-50 overflow-y-auto border-t border-[#444444] bg-[#333333] px-5 py-6 lg:hidden shadow-2xl"
         >
-          <div className="pb-4 mb-4 border-b border-[#444444] flex items-center justify-between">
-            <Logo variant="light" />
-          </div>
           <nav className="flex flex-col space-y-2">
             {BRAND_CONFIG.navigation.main.map((item) => {
               const isActive =
