@@ -6,7 +6,8 @@ import {
 export const API_BASE_URL =
   typeof window !== "undefined"
     ? "/api/v1"
-    : (process.env.INTERNAL_API_URL || "http://127.0.0.1:4000/api/v1");
+    : (process.env.INTERNAL_API_URL ||
+       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}/api/v1` : "http://127.0.0.1:3000/api/v1"));
 
 export async function fetchBlogPosts() {
   try {
