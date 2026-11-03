@@ -6,6 +6,16 @@ const JWT_SECRET =
   process.env.JWT_SECRET ||
   "qllex-secret-key-32-chars-minimum-production-secure-token-2026";
 
+declare global {
+  // eslint-disable-next-line no-var
+  var __qllex_override_admin:
+    | {
+        email: string;
+        passwordHash: string;
+      }
+    | undefined;
+}
+
 export interface AdminTokenPayload {
   sub: string;
   email: string;
@@ -58,9 +68,27 @@ export async function verifyAdminCredentials(email: string, plainPass: string) {
   const defaultPassword =
     process.env.ADMIN_BOOTSTRAP_PASSWORD || "ChangeMeInProduction!2026";
 
+  // 1. Check in-memory updated credentials if set during active session
+  if (
+    global.__qllex_override_admin &&
+    normalizedEmail === global.__qllex_override_admin.email.toLowerCase()
+  ) {
+    const valid = await bcrypt.compare(
+      plainPass,
+      global.__qllex_override_admin.passwordHash
+    );
+    if (valid) {
+      return {
+        id: "admin-active-override",
+        email: global.__qllex_override_admin.email,
+        role: "superadmin" as const,
+      };
+    }
+  }
+
   let dbConnected = false;
 
-  // 1. Attempt MongoDB database verification if available
+  // 2. Attempt MongoDB database verification if available
   try {
     await connectDB();
     dbConnected = true;
@@ -86,7 +114,7 @@ export async function verifyAdminCredentials(email: string, plainPass: string) {
     );
   }
 
-  // 2. Check configured bootstrap credentials (guarantees root administrator access)
+  // 3. Check configured bootstrap credentials (guarantees root administrator access)
   if (normalizedEmail === defaultEmail && plainPass === defaultPassword) {
     if (dbConnected) {
       try {
