@@ -198,7 +198,13 @@ export function AdminDashboardClient() {
       });
       const json = await res.json().catch(() => null);
       if (!res.ok || !json?.success) {
-        setAuthError(json?.message || "Invalid administrator credentials.");
+        if (res.status === 404) {
+          setAuthError("Backend API not found (HTTP 404). Backend server is not running or NEXT_PUBLIC_API_URL is not set.");
+        } else if (!json && res.status >= 500) {
+          setAuthError("API server is unreachable or offline. Please ensure the backend server is running.");
+        } else {
+          setAuthError(json?.message || "Invalid administrator credentials.");
+        }
         return;
       }
       const jwt = json.data.token;
